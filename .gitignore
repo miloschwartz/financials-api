@@ -3,4 +3,6 @@ financials.json/
 balance_sheets/
 cash_flow_stmts/
 income_stmts/
+profile/
+ratios/
 venv/config.py
