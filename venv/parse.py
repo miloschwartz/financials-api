@@ -40,6 +40,18 @@ def get_cash(balance_sheet):
         cash[int(year['date'].split("-")[0])] = int(year['cashAndCashEquivalents']) // 1000000  
     return cash
 
+def get_profile(profile_sheet):
+    profile = {}
+    for key,value in profile_sheet[0].items():
+        profile[key] = value
+    return profile
+
+def get_ratios(ratios_sheet):
+    ratios = {}
+    for key,value in ratios_sheet[0].items():
+        ratios[key] = round(value, 2)
+    return ratios
+
 def get_financials(ticker):
     financials = {}
     income_stmt = data.load_income_stmt(ticker)
